@@ -1,4 +1,6 @@
 import DefaultLayout from "./Default";
+import Image from 'next/image'
+
 
 
 export default function PageLayout({ page }) {
@@ -10,7 +12,7 @@ export default function PageLayout({ page }) {
         {
           page.lists_of_images.map((list, i) => (
             <div key={i}>
-              <img src={list.row[0].image} alt="" />
+              <Image src={list.row[0].image} />
               <p>{list.row[0].image}</p>
             </div>
           ))
